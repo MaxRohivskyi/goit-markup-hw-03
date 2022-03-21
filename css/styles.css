@@ -27,7 +27,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* утелити */
+/* утилити */
 
 .list {
   padding: 0;
@@ -42,6 +42,22 @@ body {
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* page-header */
@@ -140,14 +156,16 @@ body {
 /* hero */
 
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background-color: var(--secondary-background-color);
 }
 
 .hero-title {
-  margin-top: 0;
+  margin: 0 auto;
   margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 696px;
 
   color: var(--primary-white-color);
 
@@ -222,6 +240,19 @@ body {
   text-align: center;
 }
 
+.title-hide {
+  display: none;
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
 /* features */
 
 .features {
@@ -259,6 +290,10 @@ body {
 
 /* services */
 
+.section-services {
+  padding-top: 0;
+}
+
 .services {
   display: flex;
   flex-wrap: wrap;
@@ -280,6 +315,10 @@ body {
   flex-wrap: wrap;
 }
 
+.workers-section {
+  background-color: var(--section-background-color);
+}
+
 .workers-item {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
@@ -293,7 +332,6 @@ body {
   margin-top: 30px;
   margin-bottom: 0;
 
-  background-color: var(--section-background-color);
   color: var(--title-text-color);
 
   font-weight: 500;
@@ -323,10 +361,15 @@ body {
 /* footer */
 
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background-color: var(--secondary-background-color);
 }
 
 .adress-text {
+  margin-bottom: 0;
+
   color: var(--primary-white-color);
 
   font-style: normal;
@@ -343,6 +386,21 @@ body {
   font-size: 14px;
   line-height: 1.7;
   text-decoration: none;
+}
+
+.adress-footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  width: 231px;
+}
+
+.footer-item {
+  margin-bottom: 9px;
+}
+
+.footer-item:nth-child(3n) {
+  margin-bottom: 0;
 }
 
 .adress-footer .link:hover,
@@ -400,7 +458,6 @@ body {
 }
 
 .examples .examples-title {
-  margin-top: 20px;
   margin-bottom: 4px;
 
   background-color: var(--primary-white-color);
@@ -413,9 +470,6 @@ body {
 }
 
 .examples-text {
-  margin-top: 0;
-  margin-bottom: 20px;
-
   color: var(--primary-text-color);
 
   font-weight: 400;
@@ -426,9 +480,22 @@ body {
 
 .examples-cards {
   display: inline-block;
-  border: 1px solid #eeeeee;
 
   text-decoration: none;
+}
+
+.cards-title {
+  padding: 20px 24px;
+
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #eeeeee;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #eeeeee;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #eeeeee;
 }
 
 /* Кнопки фильтра */
@@ -437,9 +504,6 @@ body {
   border: 2px solid transparent;
   border-radius: 4px;
   padding: 6px 22px;
-
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
 
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
@@ -461,6 +525,11 @@ body {
 .button-filter.primary:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+}
+
+.button-filter.primary:hover {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button-filter.secondary {
